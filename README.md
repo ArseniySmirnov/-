@@ -32,4 +32,4 @@
 >Ссылка на  [программу](https://github.com/GordeyZuev/Computer-Linguistics/blob/main/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C_2.py)
 
 Чисто красивые кросы
-![Альтернативный текст](фарел.jpg)
+![Альтернативный текст](https://stoneforest.ru/wp-content/uploads/2018/11/adidas-pharrell-williams-inspiration-2.jpg)
