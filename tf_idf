@@ -1,0 +1,43 @@
+из  коллекций  счетчик импорта 
+импортная  математика
+
+def  compute_tfidf ( корпус ):
+
+    def  compute_tf ( текст ):
+
+        tf_text  =  Счетчик ( текст )
+
+        для  i  в  tf_text :
+
+            tf_text [ i ] =  tf_text [ i ] / float ( len ( текст ))
+
+        вернуть  tf_text
+
+    def  compute_idf ( слово , корпус ):
+
+        вернуть  математику . log10 ( len ( corpus ) / sum ([ 1.0  для  i  в  корпусе,  если  слово  в  i ]))
+
+ 
+
+    Documents_list  = []
+
+    для  текста  в  корпусе :
+
+        tf_idf_dictionary  = {}
+
+        computed_tf  =  compute_tf ( текст )
+
+        для  слова  в  computed_tf :
+
+            tf_idf_dictionary [ слово ] =  computed_tf [ слово ] *  compute_idf ( слово , корпус )
+
+        список_документов . добавить ( tf_idf_dictionary )
+
+    вернуть  список_документов
+
+text1 = ['My','name','is','Arseniy', 'I','am','fifthteen','years','old','and','I','am','very','found','of','team','sports']
+text2 = ['I','like','playing','volleyball','with','my','dear','friends']
+corpus  = [ текст1 , текст2 ]
+
+
+печать ( compute_tfidf ( корпус ))
