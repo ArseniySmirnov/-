@@ -3,3 +3,5 @@ import nltk
 nltk.download('averaged_perceptron_tagger_ru')
 a=nltk.pos_tag("мама мыла раму".split(),lang="rus")
 print("nltk",a)
+Вывод:nltk [('мама', 'S'), ('мыла', 'V'), ('раму', 'S')]
+
