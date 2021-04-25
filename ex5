@@ -1,0 +1,51 @@
+###ЗАДАНИЕ###
+#1) Среднее число слов в предложении, в каком предложении больше всего однобуквенных 
+#2) выберите любое #слово и посчитайте частотность термина X  (Количество раз, когда термин X встретился в тексте / количество всех слов в тексте) 
+
+
+###1###
+
+
+x = {}
+with open('text_for_test.txt', encoding='utf-8') as a:
+  a = a.read()
+  text = a.replace('?', '.').replace('!', '.').replace('...', '.').replace('—', ' ')
+  for sentence in text.split("."):
+      x[sentence] = len([j for j in sentence.split() if len(j)==1 ])
+  y = text.split(' ')
+  b = text.count('.')
+ 
+print( len(y)/b) #Выводит среднее кол во слов в предложении
+
+f = [(value, key) for key, value in x.items()]
+print ( max(f)[1],  max(kostil)[0], end = "\n") # выводит в каком предложении больше всего однобуквенных слов
+
+#Знаки двоеточия и подобные им учитываются;b - количество слов;y - длина
+
+
+
+###ЗАДАНИЕ2###
+import collections
+
+
+def compute_tf(text):
+    tf_n = collections.Counter(text)
+    for i in tf_n:
+        
+        tf_n[i] = tf_n[i]/float(len(text))
+    
+    return tf_n
+
+
+m = []
+with open('text_for_test.txt', 'r', encoding='utf-8' ) as z:
+    q = z.read()
+    for word in q.split():
+        m.append (word)
+   
+
+print(end=  " \n ")  # начинаем делать второе задание , заготовиви все для него 
+tfword = input("Введите слово, частотность которого вы хотите посчитать ")  #ввод слова , частотность которого будем считать
+     
+s = compute_tf(mylist)
+print( s[tfword]) #частотность слова
